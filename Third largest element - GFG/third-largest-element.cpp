@@ -5,21 +5,18 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
   public:
-    int thirdLargest(int arr[], int n)
-   {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                // Swap arr[j] and arr[j + 1] using a temporary variable
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
+    int thirdLargest(int a[], int n)
+    {
+         //Your code here
+         if(n<3)
+         {
+             return -1;
+             
+         }
+       
+      sort(a,a+n);
+       return a[n-3];
     }
-    return arr[n-3];
-    
-   }
 
 };
 
